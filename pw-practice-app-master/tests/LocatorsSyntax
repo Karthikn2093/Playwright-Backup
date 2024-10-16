@@ -1,0 +1,41 @@
+By Tagname
+page.locator('tagname')
+
+By id
+page.locator(#id)
+
+By ClassValue
+page.locator('.ClassValue')
+
+By Entire ClassValue
+page.locator('[class="ClassValue"]')
+
+By Attribute
+page.locator('[Attribute="Value"]')
+
+Combine different selectors
+page.locator('tagName[Attribute="Value"].ClassValue')
+
+By xPath
+page.locator('//*[@id="value"]')
+
+By PartialTextMatch
+page.locator(':text("Text")')
+
+By ExactTextMatch
+page.locator(':text-is("Text")')
+
+User Facing Locators
+page.getByRole('textbox',{name: "name"})
+page.getByRole('button',{name:"name"})
+
+page.getByLabel('label')
+page.getByPlaceholder('placeHolder')
+page.getByText('Text')
+page.getByTitle('Title')
+
+Child Elements
+page.locator('tagName tagName2 :text-is("text")')
+page.locator('tagname').locator('tagname').locator(':text-is("Text")')
+page.locator('tagname').getByRole('button',{name:"name"})
+page.locator('tagname').nth(index)
